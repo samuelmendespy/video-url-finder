@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Video Url Finder",
+  "version": "0.1",
+  "description": "Find div.video elements and retrives video urls.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
