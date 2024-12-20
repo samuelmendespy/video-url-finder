@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Video Url Finder",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Find div.video elements and retrives video urls.",
   "permissions": [
     "activeTab",
@@ -15,12 +15,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://capgeminischool.brazilsouth.cloudapp.azure.com/*"],
       "js": ["content.js"]
     }
   ],
   "host_permissions": [
-    "http://*/*",
-    "https://*/*"
+    "https://capgeminischool.brazilsouth.cloudapp.azure.com/*"
   ]
 }
